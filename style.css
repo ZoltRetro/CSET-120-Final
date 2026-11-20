@@ -113,3 +113,24 @@ p{
     color:white;
     flex-direction: row;
 }
+
+.addItem{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: #fafaf9;
+    color: #171717;
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+.addItem:hover {
+    transform: rotate(90deg) ;
+    box-shadow: 0 0 15px rgba(214, 173, 96, 0.6);
+}
+
+.addItem:active{
+    transform: scale(.8);
+}
