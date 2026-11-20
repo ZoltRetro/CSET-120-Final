@@ -47,13 +47,11 @@ if (loginForm) {
 
         alert("Invalid username or password!");
     });
+}
+
 let addedItem = [
 
 ]
-
-
-
-
 
 function addItem(button) {
     let menuItem = button.parentElement;
