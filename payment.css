@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.name{
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Cinzel', sans-serif;
+    color:rgb(65, 85, 214);
+    text-decoration: none;
+}
+
+.linkContainer{
+    display: flex;
+    flex-direction: row;
+    gap:100px;
+    background-color: #bfc0c4;
+    justify-content: center;
+}
+
+#linkOne{
+    color: rgb(65, 85, 214);
+    text-decoration: underline;
+    font-family: 'Cinzel', sans-serif;
+
+}
+
+.link{
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Cinzel', sans-serif;
+    color:rgb(65, 85, 214);
+    text-decoration: none;
+    
+}
+
+.link:hover{
+    border-radius: 10px;;
+    transition: .8s;
+    background-color: #767677;
+    color:rgb(47, 58, 133);
+
+
+}
+
+header{
+    text-align: center;
+    font-size: 80px;
+    color: rgb(65, 85, 214);
+    padding-top: 50px;
+}
+
+.shipping-container{
+    width: 100%;
+    margin-top:40px;
+    text-align: center;
+}
+
+.shipping-header{
+    color: rgb(65, 85, 214);
+    padding-bottom: 20px;
+}
+
+.billing-container{
+    width: 100%;
+    text-align: center;
+}
+
+.billing-header{
+    color: rgb(65, 85, 214);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.payment-container{
+    width: 100%;
+    text-align: center;
+    padding-left: 41%;
+}
+
+.payment-method{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    gap: 20px;
+}
+
+.payment-header{
+    color: rgb(65, 85, 214);
+    text-align: center;
+    padding-bottom: 20px;
+}
