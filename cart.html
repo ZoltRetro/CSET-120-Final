@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="cart.css">
 </head>
 <body>
+    ]
     <div class="linkContainer">
         <div class="name">Běi Dōng Nán Xī Měishí </div>
         <div class="link" id="linkOne"><a href="index.html" class="link" id="linkOne">Menu</a></div>
@@ -17,13 +18,34 @@
         <div class="link" id="linkTwo"><a href="cart.html" class="link" id="linkTwo">🛒</a></div>
 
     </div>
+    <div class="cartHeader">Cart</div>
+
     <div class="cartContainer">
-        <div class="itemContainer">
-            
-        </div>
+        
+
+    </div>
         <div class="buttonTotal">
-            <button class="purchase" onclick="checkout()">Purchase</button>
-        </div>
+            <div class="subtotalContainer">
+
+            <div class="subtotalLabel">
+                <span>ORDER SUMMARY</span>
+                <span class="summaryLine"></span>
+            </div>
+
+            <div class="subtotalAmount">
+                <span>Subtotal</span>
+                <span class="subtotal">$0.00</span>
+            </div>
+
+            <p class="subtotalNote">Taxes and additional charges calculated at checkout.</p>
+
+            </div>
+                <button class="checkoutBtn" onclick="window.location.href='checkout2.html'">
+                <span>Continue to Checkout</span>
+                <span class="arrow">→</span>
+                </button>
+
+            </div>
     </div>
     <div class="footer">
         <div class='footerLinks'>
@@ -38,6 +60,6 @@
             <div class="youtube">Youtube</div>
             <div class="google">Google</div>
         </div>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

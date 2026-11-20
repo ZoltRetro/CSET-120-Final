@@ -12,173 +12,51 @@
 </head>
 
 <body>
-
-<header class="topbar">
-  <a class="brand" href="index.html">
-    <img src="images/logo.png" alt="Restaurant Logo">
-    <span>Běi Dōng Nán Xī Měishí</span>
-  </a>
-
-  <nav class="top-links">
-    <a class="active" href="index.html">Menu</a>
-    <a href="sign-up.html">Sign-Up</a>
-    <a href="login.html">Login</a>
-    <a class="cart-link" href="cart.html">🛒</a>
-  </nav>
-</header>
-
-<main>
-
-<section class="hero">
-  <p class="eyebrow">A WORLD OF FLAVOR</p>
-  <h1>Explore Our Menu</h1>
-  <p class="hero-copy">Seven continents. Countless traditions. One table.</p>
-  <div class="hero-rule"></div>
-</section>
-
-<section class="continent-menu">
-
-  <!-- ASIA -->
-  <details class="continent" open>
-    <summary>
-      <span class="continent-number">01</span>
-      <span class="continent-name">Asia</span>
-      <span class="continent-hint">Explore Asian cuisine</span>
-      <span class="chevron">+</span>
-    </summary>
-
-    <div class="food-grid">
-
-      <article class="menu-item">
-        <img src="images/shawarma.webp" alt="Shawarma">
-        <div class="item-info">
-          <h3>Shawarma</h3>
-          <p>Marinated, seasoned meat roasted to perfection and thinly sliced, served with fresh vegetables and a flavorful garlic sauce.</p>
-          <div class="item-meta"><span>$12.99</span><span>750 calories</span></div>
-          <button class="addItem" onclick="addItem(this)">+</button>
-        </div>
-      </article>
-
-      <article class="menu-item">
-        <img src="images/wagyu_steak.avif" alt="Wagyu Steak">
-        <div class="item-info">
-          <h3>Wagyu Steak</h3>
-          <p>Premium Japanese Wagyu beef, known for its exceptional marbling and tenderness, grilled to perfection and served with a rich sauce.</p>
-          <div class="item-meta"><span>$49.99</span><span>1000 calories</span></div>
-          <button class="addItem" onclick="addItem(this)">+</button>
-        </div>
-      </article>
-
-      <article class="menu-item">
-        <img src="images/butter_chicken.jpg" alt="Butter Chicken">
-        <div class="item-info">
-          <h3>Butter Chicken</h3>
-          <p>A creamy, spiced chicken dish cooked in a rich tomato-based sauce.</p>
-          <div class="item-meta"><span>$18.99</span><span>800 calories</span></div>
-          <button class="addItem" onclick="addItem(this)">+</button>
-        </div>
-      </article>
-
-      <article class="menu-item">
-        <img src="images/chicken-biryani.jpg" alt="Chicken Biryani">
-        <div class="item-info">
-          <h3>Chicken Biryani</h3>
-          <p>Aromatic rice dish layered with spiced chicken and cooked to perfection.</p>
-          <div class="item-meta"><span>$16.99</span><span>750 calories</span></div>
-          <button class="addItem" onclick="addItem(this)">+</button>
-        </div>
-      </article>
-
-      <article class="menu-item">
-        <img src="images/dim_sum.webp" alt="Dim Sum">
-        <div class="item-info">
-          <h3>Dim Sum</h3>
-          <p>Assorted steamed dumplings filled with various ingredients, served with soy sauce.</p>
-          <div class="item-meta"><span>$14.99</span><span>600 calories</span></div>
-          <button class="addItem" onclick="addItem(this)">+</button>
-        </div>
-      </article>
-
-      <article class="menu-item">
-        <img src="images/dragon_roll.webp" alt="Dragon Roll Sushi">
-        <div class="item-info">
-          <h3>Dragon Roll Sushi</h3>
-          <p>A popular sushi roll filled with shrimp tempura and cucumber, topped with fresh avocado and drizzled with savory eel sauce.</p>
-          <div class="item-meta"><span>$15.99</span><span>750 calories</span></div>
-          <button class="addItem" onclick="addItem(this)">+</button>
-        </div>
-      </article>
-
-      <article class="menu-item">
-        <img src="images/pork_ramen.jpg" alt="Japanese Pork Ramen">
-        <div class="item-info">
-          <h3>Japanese Pork Ramen</h3>
-          <p>A comforting bowl of ramen noodles in a rich, savory broth, topped with tender pork and fresh vegetables.</p>
-          <div class="item-meta"><span>$14.99</span><span>750 calories</span></div>
-          <button class="addItem" onclick="addItem(this)">+</button>
-        </div>
-      </article>
-
-      <article class="menu-item">
-        <img src="images/laksa-soup.jpg" alt="Laksa Soup">
-        <div class="item-info">
-          <h3>Laksa Soup</h3>
-          <p>A spicy Malaysian soup with a rich, aromatic broth, typically served with rice noodles and a variety of meats or seafood.</p>
-          <div class="item-meta"><span>$12.99</span><span>700 calories</span></div>
-          <button class="addItem" onclick="addItem(this)">+</button>
-        </div>
-      </article>
-
-      <article class="menu-item">
-        <img src="images/pad-thai.jpg" alt="Pad Thai">
-        <div class="item-info">
-          <h3>Pad Thai</h3>
-          <p>A popular Thai stir-fried noodle dish made with rice noodles, eggs, tofu, and a flavorful sauce, garnished with peanuts and lime.</p>
-          <div class="item-meta"><span>$17.99</span><span>1500 calories</span></div>
-          <button class="addItem" onclick="addItem(this)">+</button>
-        </div>
-      </article>
-
-      <article class="menu-item">
-        <img src="images/peking_duck.jpg" alt="Peking Duck">
-        <div class="item-info">
-          <h3>Peking Duck</h3>
-          <p>An iconic Chinese dish featuring crispy, golden duck served with thin pancakes, scallions, and a sweet and sour sauce.</p>
-          <div class="item-meta"><span>$34.99</span><span>1200 calories</span></div>
-          <button class="addItem" onclick="addItem(this)">+</button>
-        </div>
-      </article>
-
-      <article class="menu-item">
-        <img src="images/tom-yum-goong.jpg" alt="Tom Yum Goong">
-        <div class="item-info">
-          <h3>Tom Yum Goong</h3>
-          <p>A hot and sour Thai soup made with shrimp, lemongrass, kaffir lime leaves, and chili peppers.</p>
-          <div class="item-meta"><span>$14.99</span><span>350 calories</span></div>
-          <button class="addItem" onclick="addItem(this)">+</button>
-        </div>
-      </article>
-
+    <div class="linkContainer">
+        <div class="name">Běi Dōng Nán Xī Měishí </div>
+        <div class="link" id="linkOne"><a href="index.html" class="link" id="linkOne">Menu</a></div>
+        <div class="link" id="linkThree"><a href="sign-up.html" class="link" id="linkThree">Sign-Up</a></div>
+        <div class="link" id="linkFour"><a href="login.html" class="link" id="linkFour">Login</a></div>
+         <div class="link" id="linkTwo"><a href="cart.html" class="link" id="linkTwo" onclick="cartBoi()">🛒</a></div>
+         <button class="clearCart" onclick="clearCart()">Clear Cart</button>
     </div>
-  </details>
+    <div>
+        <h1 class="menu">Menu</h1>
+        <h2 class="specials">Chef's Signature Dishes</h2>
+        <div class="menu_container">
+            <div class="menu_items">
+            <img src="images/shawarma.webp" alt="shawarma" class="imgs">
+                <p>Shawarma</p>
+                <p>Marinated, seasoned meat roasted to perfection and thinly sliced, served with fresh vegetables and a flavorful garlic sauce.</p>
+                <p>Price: $12.99</p>
+                <p>Calories: 750</p>
+                <button class="addItem" onclick="addItem(this)">+</button>
+                </div>
+                <div class="menu_items">
+                <img src="images/cajun_seafood_pasta.jpg" alt="cajunSeafoodPasta" class="imgs">
+                <p>Cajun Seafood Pasta</p>
+                <p>Creamy Cajun-seasoned pasta tossed with shrimp, crab, and tender seafood, finished with a rich and spicy sauce.</p>
+                <p>Price: $29.99</p>
+                <p>Calories: 1100</p>
+                <button class="addItem" onclick="addItem(this)">+</button>
 
-  <!-- AFRICA -->
-  <details class="continent">
-    <summary>
-      <span class="continent-number">02</span>
-      <span class="continent-name">Africa</span>
-      <span class="continent-hint">Explore African cuisine</span>
-      <span class="chevron">+</span>
-    </summary>
-
-    <div class="food-grid">
-      <article class="menu-item">
-        <img src="images/fufu.jpg" alt="Fufu">
-        <div class="item-info">
-          <h3>Fufu</h3>
-          <p>A traditional West African dish made from starchy vegetables, typically cassava or yams, pounded into a smooth, dough-like consistency and served with flavorful soups or stews.</p>
-          <div class="item-meta"><span>$10.99</span><span>750 calories</span></div>
-          <button class="addItem" onclick="addItem(this)">+</button>
+                </div>
+                <div class="menu_items">
+                <img src="images/fufu.jpg" alt="fufu" class="imgs">
+                <p>Fufu</p>
+                <p>A traditional West African dish made from starchy vegetables, typically cassava or yams, pounded into a smooth, dough-like consistency and served with flavorful soups or stews.</p>
+                <p>Price: $10.99</p>
+                <p>Calories: 750</p>
+                <button class="addItem" onclick="addItem(this)">+</button>
+                </div>
+                <div class="menu_items">
+                <img src="images/wagyu_steak.avif" alt="wagyuSteak" class="imgs">
+                <p>Wagyu Steak</p>
+                <p>Premium Japanese Wagyu beef, known for its exceptional marbling and tenderness, grilled to perfection and served with a rich sauce.</p>
+                <p>Price: $49.99</p>
+                <p>Calories: 1000</p>
+                <button class="addItem" onclick="addItem(this)">+</button>
+                </div>
         </div>
       </article>
     </div>
