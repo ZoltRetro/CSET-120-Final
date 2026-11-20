@@ -1,47 +1,108 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Login | Běi Dōng Nán Xī Měishí</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
+
 <body>
-    <div class="linkContainer">
-        <div class="name">Běi Dōng Nán Xī Měishí </div>
-        <div class="link" id="linkOne"><a href="index.html" class="link" id="linkOne">Menu</a></div>
-        <div class="link" id="linkThree"><a href="sign-up.html" class="link" id="linkThree">Sign-Up</a></div>
-        <div class="link" id="linkFour"><a href="login.html" class="link" id="linkFour">Login</a></div>
-        <div class="link" id="linkTwo"><a href="cart.html" class="link" id="linkTwo">🛒</a></div>
 
-    </div>
+    <header class="topbar">
 
-    <div class="form-box">
-            <h2>Log In</h2>
+        <a href="index.html" class="brand">
+            <img src="images/logo.png" alt="Restaurant Logo">
+            <span>Běi Dōng Nán Xī Měishí</span>
+        </a>
+
+        <nav class="top-links">
+            <a href="index.html">Menu</a>
+            <a href="sign-up.html">Sign-Up</a>
+            <a href="login.html" class="active">Login</a>
+            <a href="cart.html">🛒</a>
+        </nav>
+
+    </header>
+
+    <main class="login-section">
+
+        <div class="login-decoration">
+            <span>EST. WORLDWIDE</span>
+            <div class="decoration-line"></div>
+        </div>
+
+        <div class="form-box">
+
+            <p class="eyebrow">WELCOME BACK</p>
+
+            <h1>Log In</h1>
+
+            <p class="subtitle">
+                Your table is waiting.
+            </p>
+
+            <div class="form-divider"></div>
+
             <form id="login-form">
-                <input type="text" id="login-username" placeholder="Username" required>
-                <input type="password" id="login-password" placeholder="Password" required>
+
+                <label for="login-username">Username</label>
+                <input
+                    type="text"
+                    id="login-username"
+                    placeholder="Enter your username"
+                    required
+                >
+
+                <label for="login-password">Password</label>
+                <input
+                    type="password"
+                    id="login-password"
+                    placeholder="Enter your password"
+                    required
+                >
+
                 <button type="submit">Log In</button>
+
             </form>
-    </div>
 
-    <div class="footer">
-        <div class='footerLinks'>
-            <div class="flOne"></div>
-            <div class="flTwo"></div>
-            <div class="flThree"></div>
+            <p class="signup-prompt">
+                Don't have an account?
+                <a href="sign-up.html">Sign Up</a>
+            </p>
 
         </div>
+
+        <div class="login-decoration bottom-decoration">
+            <div class="decoration-line"></div>
+            <span>AN EXPERIENCE OF FLAVOR</span>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+            Běi Dōng Nán Xī Měishí
+        </div>
+
         <div class="socials">
-            <div class="insta">Instagram</div>
-            <div class="facebook">Facebook</div>
-            <div class="youtube">Youtube</div>
-            <div class="google">Google</div>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">Google</a>
         </div>
-    </div>
-        <script src="script.js"></script>
+
+        <p>© Běi Dōng Nán Xī Měishí</p>
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

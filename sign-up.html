@@ -3,44 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
 
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+
+    <title>Sign Up | Běi Dōng Nán Xī Měishí</title>
     <link rel="stylesheet" href="sign-up.css">
 </head>
+
 <body>
-    <div class="linkContainer">
-        <div class="name">Běi Dōng Nán Xī Měishí </div>
-        <div class="link" id="linkOne"><a href="index.html" class="link" id="linkOne">Menu</a></div>
-        <div class="link" id="linkThree"><a href="sign-up.html" class="link" id="linkThree">Sign-Up</a></div>
-        <div class="link" id="linkFour"><a href="login.html" class="link" id="linkFour">Login</a></div>
-        <div class="link" id="linkTwo"><a href="cart.html" class="link" id="linkTwo">🛒</a></div>
-    </div>
 
-    <div class="form-box">
-            <h2>Sign Up</h2>
+    <header class="topbar">
+        <div class="brand">
+            <img src="images/logo.png" alt="Restaurant Logo">
+            <h1>Běi Dōng Nán Xī Měishí</h1>
+        </div>
+
+        <nav class="navigation">
+            <a href="index.html">Menu</a>
+            <a href="sign-up.html" class="active">Sign Up</a>
+            <a href="login.html">Login</a>
+            <a href="cart.html">🛒</a>
+        </nav>
+    </header>
+
+    <main class="signup-section">
+
+        <div class="form-box">
+            <p class="subtitle">JOIN OUR TABLE</p>
+
+            <h2>Create an Account</h2>
+
+            <p class="description">
+                Become a member of Běi Dōng Nán Xī Měishí.
+            </p>
+
             <form id="signup-form">
-                <input type="text" id="signup-username" placeholder="Username" required>
-                <input type="email" id="signup-email" placeholder="Email" required>
-                <input type="password" id="signup-password" placeholder="Password" required>
-                <button type="submit">Sign Up</button>
+
+                <label for="signup-username">Username</label>
+                <input
+                    type="text"
+                    id="signup-username"
+                    placeholder="Choose a username"
+                    required
+                >
+
+                <label for="signup-email">Email Address</label>
+                <input
+                    type="email"
+                    id="signup-email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="signup-password">Password</label>
+                <input
+                    type="password"
+                    id="signup-password"
+                    placeholder="Create a password"
+                    required
+                >
+
+                <button type="submit">Create Account</button>
+
             </form>
-    </div>
 
-    <div class="footer">
-        <div class='footerLinks'>
-            <div class="flOne"></div>
-            <div class="flTwo"></div>
-            <div class="flThree"></div>
+            <p class="login-prompt">
+                Already have an account?
+                <a href="login.html">Login here</a>
+            </p>
 
         </div>
-        <div class="socials">
-            <div class="insta">Instagram</div>
-            <div class="facebook">Facebook</div>
-            <div class="youtube">Youtube</div>
-            <div class="google">Google</div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+            <h3>Běi Dōng Nán Xī Měishí</h3>
+
+            <p>Bringing the flavors of the world to your table.</p>
+
+            <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+                <a href="#">Google</a>
+            </div>
+
+            <p class="copyright">
+                © 2026 Běi Dōng Nán Xī Měishí. All Rights Reserved.
+            </p>
+
         </div>
-    </div>
+    </footer>
+
     <script src="script.js"></script>
+
 </body>
 </html>
