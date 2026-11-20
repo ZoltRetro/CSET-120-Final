@@ -5,48 +5,7 @@
 }
 
 .menu{
-    text-align: center;
-    font-size: 100px;
-    padding: 20px 0;
-}
-.name{
-    font-size: 60px;
-    font-weight: bold;
-    font-family: 'Cinzel', sans-serif;
-    color:rgb(65, 85, 214);
-    text-decoration: none;
-}
-.linkContainer{
-    display: flex;
-    flex-direction: row;
-    gap:100px;
-    background-color: #bfc0c4;
-    justify-content: center;
-   
-}
-#linkOne{
-    color: rgb(65, 85, 214);
-    text-decoration: underline;
-    font-family: 'Cinzel', sans-serif;
-
-}
-
-.link{
-    font-size: 60px;
-    font-weight: bold;
-    font-family: 'Cinzel', sans-serif;
-    color:rgb(65, 85, 214);
-    text-decoration: none;
-    
-}
-
-.link:hover{
-    border-radius: 10px;;
-    transition: .8s;
-    background-color: #767677;
-    color:rgb(47, 58, 133);
-
-
+    /* background-color: lightslategray; */
 }
 .name{
     font-size: 60px;
@@ -153,4 +112,25 @@ p{
     background-color:black;
     color:white;
     flex-direction: row;
+}
+
+.addItem{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: #fafaf9;
+    color: #171717;
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+.addItem:hover {
+    transform: rotate(90deg) ;
+    box-shadow: 0 0 15px rgba(214, 173, 96, 0.6);
+}
+
+.addItem:active{
+    transform: scale(.8);
 }
