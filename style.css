@@ -134,3 +134,19 @@ p{
 .addItem:active{
     transform: scale(.8);
 }
+.quantity{
+    display: inline-block;
+    background: #fcfcfb;
+    color: #171717;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-left: 8px;
+    min-width: 20px;
+    text-align: center;
+}
+.addQuantContainer{
+    display:flex;
+    flex-direction: row;
+}

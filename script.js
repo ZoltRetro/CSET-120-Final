@@ -55,6 +55,7 @@ let addedItem = [
 
 function addItem(button) {
     let menuItem = button.parentElement;
+    let thing = document.getElementsByClassName("menu_items")
     let paragraphs = menuItem.querySelectorAll("p");
     let name = paragraphs[0].textContent;
     let price = parseFloat(
@@ -76,11 +77,32 @@ function addItem(button) {
             price: price,
             quantity: 1
         });
-
+        
+            
     }
+
+    
+    
     localStorage.setItem("cart", JSON.stringify(cart));
     console.log(cart);
 
+    updateMenuQuantities();
+
+}
+function updateMenuQuantities(){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    document.querySelectorAll(".menu_items").forEach(menuItem => {
+
+        let name = menuItem.querySelector("p").innerText;
+
+        let item = cart.find(item => item.name === name);
+
+        let quantity = menuItem.querySelector(".quantity");
+
+        quantity.innerText = item ? `× ${item.quantity}` : "";
+
+    });
 }
 
 
@@ -113,7 +135,11 @@ function cartBoi(){
 
 function clearCart(){
     localStorage.removeItem("cart");
+
 }
+document.addEventListener("DOMContentLoaded", () => {
+    updateMenuQuantities();
+});
 document.addEventListener("DOMContentLoaded", function() {
 
     cartBoi();
