@@ -1,6 +1,7 @@
 let usernames = JSON.parse(localStorage.getItem("usernames")) || [];
 let passwords = JSON.parse(localStorage.getItem("passwords")) || [];
 
+
 let signupForm = document.getElementById("signup-form");
 
 if (signupForm) {
