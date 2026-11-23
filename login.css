@@ -5,9 +5,20 @@
     box-sizing: border-box;
 }
 
+:root {
+    --black: #090707;
+    --panel: #151010;
+    --panel-light: #211515;
+    --red: #8f101c;
+    --red-bright: #b51f2c;
+    --gold: #c7a66a;
+    --cream: #eee5d8;
+    --muted: #aa9c91;
+}
+
 body {
-    background-color: #0b0909;
-    color: #e8dfd0;
+    background: var(--black);
+    color: var(--cream);
     font-family: 'Cormorant Garamond', serif;
     min-height: 100vh;
     display: flex;
@@ -17,50 +28,56 @@ body {
 /* NAVIGATION */
 
 .topbar {
-    background-color: #100c0c;
-    border-bottom: 1px solid #54151b;
-    min-height: 85px;
-    padding: 12px 5%;
+    min-height: 92px;
+    padding: 14px 6%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 24px;
+    background: #050404;
+    border-bottom: 2px solid var(--red);
+    box-shadow: 0 5px 24px #000;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 16px;
+    color: var(--gold);
     text-decoration: none;
-    color: #c9a66b;
     font-family: 'Cinzel', serif;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: clamp(17px, 2vw, 27px);
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .brand img {
-    width: 55px;
-    height: 55px;
+    width: 62px;
+    height: 62px;
     object-fit: contain;
 }
 
 .top-links {
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: clamp(14px, 2.5vw, 38px);
 }
 
 .top-links a {
+    color: var(--cream);
     text-decoration: none;
-    color: #d8cfc2;
     font-family: 'Cinzel', serif;
-    font-size: 16px;
-    transition: 0.3s;
+    font-size: 15px;
+    transition: color .25s ease;
 }
 
 .top-links a:hover,
-.top-links .active {
-    color: #a82b36;
+.top-links a.active {
+    color: var(--red-bright);
+}
+
+.top-links .cart-link {
+    font-size: 25px;
 }
 
 /* LOGIN SECTION */
@@ -73,7 +90,7 @@ body {
     align-items: center;
     padding: 70px 20px;
     background:
-        radial-gradient(ellipse at center, #241013 0%, #100b0c 50%, #0b0909 100%);
+        radial-gradient(ellipse at center, #351014 0%, #16090b 50%, var(--black) 100%);
 }
 
 /* DECORATION */
@@ -92,14 +109,14 @@ body {
     font-family: 'Cinzel', serif;
     font-size: 11px;
     letter-spacing: 3px;
-    color: #a88655;
+    color: var(--gold);
     white-space: nowrap;
 }
 
 .decoration-line {
     height: 1px;
     flex: 1;
-    background-color: #632027;
+    background: #492027;
 }
 
 /* FORM BOX */
@@ -108,37 +125,39 @@ body {
     width: 430px;
     max-width: 100%;
     padding: 45px;
-    background-color: #151010;
-    border: 1px solid #572027;
+    background: var(--panel);
+    border: 1px solid #492027;
     border-radius: 5px;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 15px 50px #0009;
     text-align: center;
 }
 
 .eyebrow {
     font-family: 'Cinzel', serif;
-    font-size: 12px;
-    letter-spacing: 4px;
-    color: #a88655;
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--gold);
 }
 
 .form-box h1 {
     font-family: 'Cinzel', serif;
     font-size: 42px;
-    color: #e6d5b8;
+    font-weight: 500;
+    color: var(--cream);
     margin-top: 12px;
 }
 
 .subtitle {
-    color: #a99a8a;
+    color: var(--muted);
     font-size: 19px;
     margin-top: 8px;
+    font-style: italic;
 }
 
 .form-divider {
-    width: 60px;
-    height: 2px;
-    background-color: #8e252f;
+    width: 90px;
+    height: 3px;
+    background: var(--red-bright);
     margin: 25px auto 30px;
 }
 
@@ -151,7 +170,7 @@ body {
 #login-form label {
     font-family: 'Cinzel', serif;
     font-size: 13px;
-    color: #c9a66b;
+    color: var(--gold);
     margin-bottom: 8px;
 }
 
@@ -159,19 +178,19 @@ body {
     width: 100%;
     padding: 15px;
     margin-bottom: 23px;
-    background-color: #0c0909;
-    border: 1px solid #432025;
+    background: #0d0a0a;
+    border: 1px solid #382024;
     border-radius: 3px;
-    color: #eee3d4;
+    color: var(--cream);
     font-family: 'Cormorant Garamond', serif;
     font-size: 17px;
     outline: none;
-    transition: 0.3s;
+    transition: border-color .25s ease, box-shadow .25s ease;
 }
 
 #login-form input:focus {
-    border-color: #a82b36;
-    box-shadow: 0 0 10px rgba(168, 43, 54, 0.2);
+    border-color: var(--red-bright);
+    box-shadow: 0 0 10px #b51f2c33;
 }
 
 #login-form input::placeholder {
@@ -182,40 +201,42 @@ body {
     width: 100%;
     padding: 15px;
     margin-top: 5px;
-    background-color: #741d27;
-    border: 1px solid #a33a44;
-    color: #f1e5d2;
+    background: var(--red);
+    border: 1px solid var(--red-bright);
+    border-radius: 3px;
+    color: var(--cream);
     font-family: 'Cinzel', serif;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 2px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background .25s ease, box-shadow .25s ease, transform .25s ease;
 }
 
 #login-form button:hover {
-    background-color: #a12b37;
-    box-shadow: 0 0 18px rgba(161, 43, 55, 0.3);
+    background: var(--red-bright);
+    box-shadow: 0 0 18px #b51f2c44;
 }
 
 #login-form button:active {
-    transform: scale(0.98);
+    transform: scale(.98);
 }
 
 .signup-prompt {
     margin-top: 25px;
     font-size: 16px;
-    color: #a99a8a;
+    color: var(--muted);
 }
 
 .signup-prompt a {
-    color: #c9a66b;
+    color: var(--gold);
     text-decoration: none;
     margin-left: 5px;
+    transition: color .25s ease;
 }
 
 .signup-prompt a:hover {
-    color: #a82b36;
+    color: var(--red-bright);
     text-decoration: underline;
 }
 
@@ -228,8 +249,8 @@ body {
 
 .footer {
     min-height: 130px;
-    background-color: #100c0c;
-    border-top: 1px solid #54151b;
+    background: #050404;
+    border-top: 2px solid var(--red);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -240,8 +261,8 @@ body {
 
 .footer-brand {
     font-family: 'Cinzel', serif;
-    font-size: 17px;
-    color: #c9a66b;
+    font-size: 21px;
+    color: var(--gold);
 }
 
 .socials {
@@ -252,19 +273,17 @@ body {
 }
 
 .socials a {
-    color: #a99a8a;
+    color: var(--muted);
     text-decoration: none;
-    font-size: 15px;
-    transition: 0.3s;
+    font-size: 17px;
+    transition: color .25s ease;
 }
 
 .socials a:hover {
-    color: #a82b36;
+    color: var(--red-bright);
 }
 
 .footer p {
-    color: #665b55;
-    font-size: 13px;
+    color: #766b64;
+    font-size: 14px;
 }
-
-

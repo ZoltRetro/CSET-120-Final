@@ -1,6 +1,6 @@
 let usernames = JSON.parse(localStorage.getItem("usernames")) || [];
 let passwords = JSON.parse(localStorage.getItem("passwords")) || [];
-
+let badge = JSON.parse(localStorage.getItem("badgeNumber")) || [];
 
 let signupForm = document.getElementById("signup-form");
 
@@ -49,22 +49,22 @@ if (loginForm) {
     });
 }
 
+let addedItem = [
+
+]
 
 function addItem(button) {
-    let menuItem = button.closest(".menu_items");
-
-    let name = menuItem.querySelector("h3").innerText;
-
-    let priceText = menuItem.querySelector(".item-meta span").innerText;
-    let price = parseFloat(priceText.replace("$", ""));
-
+    let menuItem = button.closest(".menu-item");
+    let name = menuItem.querySelector("h3").textContent.trim();
+    let price = parseFloat(
+        menuItem.querySelector(".item-meta span").textContent.replace("$", "")
+    );
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
     let existingItem = cart.find(item => item.name === name);
-
     if (existingItem) {
         existingItem.quantity++;
-    } else {
+    } 
+    else {
         cart.push({
             name: name,
             price: price,
@@ -73,12 +73,10 @@ function addItem(button) {
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));
-
+    console.log(cart);
     updateMenuQuantities();
 }
-
-
-function updateMenuQuantities() {
+function updateMenuQuantities(){
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     document.querySelectorAll(".menu_items").forEach(menuItem => {
@@ -89,23 +87,33 @@ function updateMenuQuantities() {
 
         let quantity = menuItem.querySelector(".quantity");
 
-        if (quantity) {
-            quantity.innerText = item ? `× ${item.quantity}` : "";
-        }
+        quantity.innerText = item ? `× ${item.quantity}` : "";
 
     });
 }
 
+function removeCartItem(itemName) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let existingItem = cart.find(item => item.name === itemName);
+    if (existingItem) {
+        existingItem.quantity--;
+        if (existingItem.quantity <= 0) {
+            cart = cart.filter(item => item.name !== itemName);
+        }
+
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    cartBoi();
+}
 
 function cartBoi() {
+
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     let itemCont = document.querySelector(".cartContainer");
     let subTotal = document.querySelector(".subtotal");
-
-    if (!itemCont || !subTotal) {
-        return;
-    }
 
     itemCont.innerHTML = "";
 
@@ -113,12 +121,22 @@ function cartBoi() {
 
     cart.forEach(item => {
 
-        let newItemAdded = document.createElement("div");
-
+        const newItemAdded = document.createElement("div");
         newItemAdded.classList.add("item");
 
-        newItemAdded.textContent =
-            `${item.name} - $${item.price.toFixed(2)} Quantity: ${item.quantity}`;
+        const itemInfo = document.createElement("p");
+        itemInfo.textContent = `${item.name} - $${item.price.toFixed(2)} Quantity: ${item.quantity}`;
+
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.classList.add("removeItem");
+
+        removeButton.onclick = function() {
+            removeCartItem(item.name);
+        };
+
+        newItemAdded.appendChild(itemInfo);
+        newItemAdded.appendChild(removeButton);
 
         itemCont.appendChild(newItemAdded);
 
@@ -126,19 +144,22 @@ function cartBoi() {
 
     });
 
-    subTotal.innerHTML = `Subtotal: $${total.toFixed(2)}`;
+    subTotal.textContent = `Subtotal: $${total.toFixed(2)}`;
 }
 
-
-function clearCart() {
+function clearCart(){
     localStorage.removeItem("cart");
-
-    updateMenuQuantities();
-    cartBoi();
+    location.reload();
 }
-
-
+let johnson = document.getElementsByClassName("active")
 document.addEventListener("DOMContentLoaded", function() {
-    updateMenuQuantities();
+    
     cartBoi();
+
 });
+
+
+function managerAdd(){
+    let grid = document.getElementsByClassName("food-grid");
+    
+}
