@@ -12,69 +12,87 @@
         <div class="link" id="linkOne"><a href="index.html" class="link" id="linkOne">Menu</a></div>
         <div class="link" id="linkThree"><a href="sign-up.html" class="link" id="linkThree">Sign-Up</a></div>
         <div class="link" id="linkFour"><a href="login.html" class="link" id="linkFour">Login</a></div>
-         <div class="link" id="linkTwo"><a href="cart.html" class="link" id="linkTwo">🛒</a></div>
+        <div class="link" id="linkTwo"><a href="cart.html" class="link" id="linkTwo">🛒</a></div>
     </div>
-
     <header>Payment</header>
-    <div class="shipping-container" id="shipping-container">
-        <form class="shipping-form" id="shipping-form">
-            <h2 class="shipping-header">Shipping Address</h2>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
+            <div class="shipping-container" id="shipping-container">
+                <form class="shipping-form" id="shipping-form">
+                    <h2 class="shipping-header">Shipping Address</h2>
+                        <div class="info">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required><br><br>
 
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required><br><br>
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" name="address" required><br><br>
 
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" required><br><br>
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" required><br><br>
 
-            <label for="state">State:</label>
-            <input type="text" id="state" name="state" required><br><br>
+                            <label for="state">State:</label>
+                            <input type="text" id="state" name="state" required><br><br>
 
-            <label for="zip">ZIP Code:</label>
-            <input type="text" id="zip" name="zip" required><br><br>
+                            <label for="zip">ZIP Code:</label>
+                            <input type="text" id="zip" name="zip" required><br><br>
 
-            <button type="save">Save</button>
+                            <button type="save">Save</button>
+                            </div>
+                </form>
+            </div>
+
+<div class="billing-container" id="billing-container">
+    <form class="billing-form" id="billing-form">
+        <h2 class="billing-header">Billing Address</h2>
+            <div class="info">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required><br><br>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required><br><br>
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required><br><br>
+
+                <label for="zip">ZIP Code:</label>
+                <input type="text" id="zip" name="zip" required><br><br>
+
+                <button type="save">Save</button>
+            </div>
         </form>
-        </div>
-         <div class="billing-container" id="billing-container">
-        <form class="billing-form" id="billing-form">
-            <h2 class="billing-header">Billing Address</h2>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required><br><br>
-
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" required><br><br>
-
-            <label for="state">State:</label>
-            <input type="text" id="state" name="state" required><br><br>
-
-            <label for="zip">ZIP Code:</label>
-            <input type="text" id="zip" name="zip" required><br><br>
-
-            <button type="save">Save</button>
-        </form>
-        </div>
-        <h2 class="payment-header">Payment Method</h2>
+    </div>
+    <h2 class="payment-header">Payment Methods</h2>
         <div class="payment-container" id="payment-container">
             <div class="payment-method" id="payment-method">
-                <button class="credit-debit" id="credit-debit">
-                    Credit/Debit Card
-                </button>
-                <button class="paypal" id="paypal">
-                    PayPal
-                </button>
-                <button class="apple-pay" id="apple-pay">
-                    Apple Pay
-                </button>
+                <div class="dropdown">
+                    <button onclick="dropdown(this)"class="credit-debit" id="credit-debit">
+                        Credit/Debit Card
+                    </button>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <input type="text" id="card-number" name="card-number" placeholder="Card Number" required>
+                    <input type="text" id="expiration-date" name="expiration-date" placeholder="Expiration Date" required>
+                    <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+                    <input type="text" id="country" name="country" placeholder="Country" required>
+                    <input type="text" id="zip-code" name="zip-code" placeholder="ZIP Code" required>
+                </div>
+            </div>
                 <button class="cash" id="cash">
                     Cash
                 </button>
-                Total: $0.00
-            </div>
+                <input type="text" id="tip" name="tip" placeholder="Tip(optional)" required>
+<div class="tip" id="tip">
+    <span>
+        <button>15%</button>
+        <button>18%</button>
+        <button>20%</button>
+    </span>
+    </div>
+        <p>Total: $0.00</p>
+    </div>
+        </div>
+        <div class="checkout-container">
+        <button onclick="orderConfirmed()"class="Checkout" id="Checkout">Checkout</button>
         </div>
 
     <script src="payment.js"></script>
