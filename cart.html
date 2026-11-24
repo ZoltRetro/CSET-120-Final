@@ -9,60 +9,79 @@
     <link rel="stylesheet" href="cart.css">
 </head>
 <body>
-    
-    <div class="linkContainer">
-        <div class="name">Běi Dōng Nán Xī Měishí </div>
-        <div class="link" id="linkOne"><a href="index.html" class="link" id="linkOne">Menu</a></div>
-        <div class="link" id="linkThree"><a href="sign-up.html" class="link" id="linkThree">Sign-Up</a></div>
-        <div class="link" id="linkFour"><a href="login.html" class="link" id="linkFour">Login</a></div>
-        <div class="link" id="linkTwo"><a href="cart.html" class="link" id="linkTwo">🛒</a></div>
-
-    </div>
-    <div class="cartHeader">Cart</div>
-    <div class="cartCartContainer">
-        <div class="cartContainer">
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <img src="images/logo.png" alt="Restaurant Logo">
+            <span>Běi Dōng Nán Xī Měishí</span>
+        </a>
+        <nav class="top-links">
+            <a class="active" href="index.html">Menu</a>
+            <a class="cart-link" href="cart.html" onclick="cartBoi()">🛒</a>
+            <a href="login.html" class="login">Login</a>
+            <a href="account.html" class="account"></a>
             
+        </nav>
+    </header>
 
-        </div>
-    
-        <div class="buttonTotal">
-            <div class="subtotalContainer">
+    <main class="cartPage">
 
-            <div class="subtotalLabel">
-                <span>ORDER SUMMARY</span>
-                <span class="summaryLine"></span>
-            </div>
+        <h1 class="cartHeader">Your Cart</h1>
 
-            <div class="subtotalAmount">
-                <span>Subtotal</span>
-                <span class="subtotal">$0.00</span>
-            </div>
+        <div class="cartCartContainer">
 
-            <p class="subtotalNote">Taxes and additional charges calculated at checkout.</p>
+            <section class="cartSection">
+                <div class="cartContainer">
+                    <!-- Javascript will insert cart items here -->
+                </div>
 
-            </div>
-                <button class="checkoutBtn" onclick="window.location.href='checkout.html'">
-                <span>Continue to Checkout</span>
-                <span class="arrow">→</span>
+                <button class="clearCart" type="button" onclick="clearCart()">
+                    Clear Cart
+                </button>
+            </section>
+
+            <aside class="buttonTotal">
+
+                <div class="subtotalContainer">
+
+                    <div class="subtotalLabel">
+                        <span>ORDER SUMMARY</span>
+                        <span class="summaryLine"></span>
+                    </div>
+
+                    <div class="subtotalAmount">
+                        <span>Subtotal</span>
+                        <span class="subtotal">$0.00</span>
+                    </div>
+
+                    <p class="subtotalNote">
+                        Taxes and additional charges calculated at checkout.
+                    </p>
+
+                </div>
+
+                <button class="checkoutBtn"
+                    onclick="checkout()">
+                    <span>Continue to Checkout</span>
+                    <span class="arrow">→</span>
                 </button>
 
-        </div>
-            <button class="clearCart" type="button" onclick="clearCart()">Clear Cart</button>
-    </div>
-    </div>
-    <div class="footer">
-        <div class='footerLinks'>
-            <div class="flOne"></div>
-            <div class="flTwo"></div>
-            <div class="flThree"></div>
+            </aside>
 
         </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-brand">Běi Dōng Nán Xī Měishí</div>
         <div class="socials">
-            <div class="insta">Instagram</div>
-            <div class="facebook">Facebook</div>
-            <div class="youtube">Youtube</div>
-            <div class="google">Google</div>
+            <a href="https://www.instagram.com/nba_youngboy/" class="link">Instagram</a>
+            <a href="https://www.facebook.com/river.christlight/" class="link">Facebook</a>
+            <a href="https://youtu.be/XIwy_5Vdw_o?si=v7Iv7uFFBnfd_QHn" class="link">YouTube</a>
+            <a href="https://www.google.com/search?q=home+depot&sca_esv=84ace98110dff800&sxsrf=AKL5yDiY9CPKygD_OgtNFMl5xkk6r0GB2A%3A1795528827556&source=hp&ei=e5gFa7PvHpOD0PEP5s2zoQo&iflsig=AHSINFcAAAAAawWmiyvFDEtodhm9TD8zOUEtX3ZDnSS0&ved=2ahUKEwjzmMqP4qCYAxWTATQIHebmLKQQ4dUDegQIABAp&uact=5&oq=home+depot&gs_lp=Egdnd3Mtd2l6Igpob21lIGRlcG90Mg4QLhiABBixAxjHARjRAzILEAAYgAQYsQMYyQMyERAuGIAEGJIDGMcBGK8BGI4FMgsQLhiABBjHARivATILEC4YgAQYxwEYrwEyCxAuGIAEGMcBGK8BMgsQLhiABBjHARivATIFEAAYgAQyCxAuGIAEGMcBGK8BMgUQABiABEjXDVAAWIUNcAB4AJABAJgBN6AB4wOqAQIxMLgBA8gBAPgBAZgCCqACkATCAhEQLhiABBixAxjHARivARiOBcICERAAGIAEGIoFGLEDGIMBGLQHwgIOEC4YgAQYigUYsQMYgwHCAhEQLhiABBiKBRiNBhixAxiDAcICCBAAGIAEGLQHwgIIEAAYgAQYsQPCAg4QLhiABBiKBRiNBhixA8ICFBAAGIAEGIoFGI0GGLEDGIMBGLQHwgIREC4YgAQYsQMYgwEYxwEY0QPCAggQLhiABBi0B8ICCxAAGIAEGLEDGIMBwgILEAAYgAQYigUYkgPCAgsQLhiABBixAxiDAcICDhAuGIAEGMcBGK8BGI4FwgIIEAAYgAQYyQOYAwCSBwIxMKAH754BsgcCMTC4B5AEwgcFMC43LjPIBx6ACAE&sclient=gws-wiz" class="link">Google</a>
         </div>
-<script src="script.js" defer></script>
+        <p>© Běi Dōng Nán Xī Měishí</p>
+    </footer>
+
+
+    <script src="script.js" defer></script>
 </body>
 </html>

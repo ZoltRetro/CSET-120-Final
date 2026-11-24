@@ -216,25 +216,18 @@ body {
     text-decoration: underline;
 }
 
-/* FOOTER */
-
 .footer {
-    background: #050404;
-    border-top: 2px solid var(--red);
     padding: 32px 20px;
     text-align: center;
+    background: #050404;
+    border-top: 2px solid var(--red);
 }
 
-.footer-content h3 {
-    font-family: 'Cinzel', serif;
+.footer-brand {
+    margin-bottom: 15px;
     color: var(--gold);
+    font-family: 'Cinzel', serif;
     font-size: 21px;
-    margin-bottom: 8px;
-}
-
-.footer-content p {
-    color: var(--muted);
-    font-size: 16px;
 }
 
 .socials {
@@ -242,23 +235,33 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
-    margin: 20px 0;
-}
-
-.socials a {
+    margin-bottom: 16px;
     color: var(--muted);
-    text-decoration: none;
     font-size: 17px;
-    transition: color .25s ease;
+    
+}
+.link{
+    text-decoration: none;
+    color:white;
+}
+.link:hover{
+    color:red;
+
 }
 
-.socials a:hover {
-    color: var(--red-bright);
-}
-
-.footer-content .copyright {
-    font-size: 14px;
+.footer p {
     color: #766b64;
-    margin-top: 20px;
+    font-size: 14px;
 }
 
+.account{
+    display:none;
+    background-image: url(https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg);
+    background-repeat: no-repeat;
+    background-size: 3vw 5.7vh;
+    background-position: center;
+    border-radius: 30px;;
+    height:40px;
+    width:40px;
+
+}

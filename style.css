@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -94,7 +95,6 @@ body {
     font-size: clamp(38px, 6vw, 70px);
     font-weight: 500;
 }
-
 
 .hero-copy {
     color: var(--muted);
@@ -254,10 +254,19 @@ body {
     font-weight: 700;
 }
 
-.addItem {
+/* QUANTITY SELECTOR */
+
+.addQuantContainer {
     position: absolute;
     right: 14px;
     bottom: 58px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.addItem,
+.subtractItem {
     width: 38px;
     height: 38px;
     border: 1px solid var(--gold);
@@ -266,16 +275,30 @@ body {
     color: white;
     font-size: 25px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: transform .25s ease, background .25s ease;
 }
 
-.addItem:hover {
-    transform: rotate(90deg);
+.addItem:hover,
+.subtractItem:hover {
     background: var(--red-bright);
+    transform: scale(1.1);
 }
 
-.addItem:active {
+.addItem:active,
+.subtractItem:active {
     transform: scale(.88);
+}
+
+.quantity {
+    color: var(--cream);
+    font-family: 'Cinzel', serif;
+    font-size: 17px;
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
 }
 
 .empty-region {
@@ -284,6 +307,48 @@ body {
     font-size: 19px;
     font-style: italic;
     border-top: 1px solid #492027;
+}
+.add-menu-item{
+    display:block;
+    height:50px;
+    width:300px;
+    align-self: last baseline;
+    align-content: center;
+    border-radius: 30px;
+    background: none;
+    color: red;
+    border:solid #000 1px;
+    transition: .5s ease ;
+}
+.add-menu-item:hover{
+    
+    background-color: red;
+    color: #000;
+    
+}
+.add-menu-item{
+    display: none;
+}
+.remove-menu-item{
+    display:block;
+    height:50px;
+    width:300px;
+    align-self: last baseline;
+    align-content: center;
+    border-radius: 30px;
+    background: none;
+    color: red;
+    border:solid #000 1px;
+    transition: .5s ease ;
+}
+.remove-menu-item:hover{
+    
+    background-color: red;
+    color: #000;
+    
+}
+.remove-menu-item{
+    display: none;
 }
 
 .footer {
@@ -308,6 +373,15 @@ body {
     margin-bottom: 16px;
     color: var(--muted);
     font-size: 17px;
+    
+}
+.link{
+    text-decoration: none;
+    color:white;
+}
+.link:hover{
+    color:red;
+
 }
 
 .footer p {
@@ -315,23 +389,14 @@ body {
     font-size: 14px;
 }
 
-.quantity{
-    display: inline-block;
-    background: #fcfcfb;
-    color: #171717;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 5px 12px;
-    border-radius: 20px;
-    margin-left: 8px;
-    min-width: 20px;
-    text-align: center;
-}
-.addQuantContainer{
-    display:flex;
-    flex-direction: row;
-}
-.addQuantContainer{
-    display:flex;
-    flex-direction: row;
+.account{
+    display:none;
+    background-image: url(https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg);
+    background-repeat: no-repeat;
+    background-size: 3vw 5.7vh;
+    background-position: center;
+    border-radius: 30px;;
+    height:40px;
+    width:40px;
+
 }

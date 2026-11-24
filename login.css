@@ -82,20 +82,63 @@ body {
 
 /* LOGIN SECTION */
 
-.login-section {
+/* BOTH LOGIN SECTIONS */
+
+.login-section,
+.manager-login-section {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 70px 20px;
-    background:
-        radial-gradient(ellipse at center, #351014 0%, #16090b 50%, var(--black) 100%);
+    background: radial-gradient(
+        ellipse at center,
+        #351014 0%,
+        #16090b 50%,
+        var(--black) 100%
+    );
+}
+/* Both login sections */
+/* Login sections */
+.login-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-/* DECORATION */
+#customer-login {
+    display: flex;
+}
 
-.login-decoration {
+#manager-login {
+    display: none;
+}
+
+.top-links a.active {
+    color: var(--red-bright);
+}
+
+/* Both form containers */
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Both forms */
+#login-form,
+#manager-login-form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    text-align: left;
+}
+/* BOTH DECORATIONS */
+
+.login-decoration,
+.manager-login-decoration {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -105,7 +148,8 @@ body {
     justify-content: center;
 }
 
-.login-decoration span {
+.login-decoration span,
+.manager-login-decoration span {
     font-family: 'Cinzel', serif;
     font-size: 11px;
     letter-spacing: 3px;
@@ -113,10 +157,91 @@ body {
     white-space: nowrap;
 }
 
+/* DECORATION LINE */
+
 .decoration-line {
     height: 1px;
     flex: 1;
     background: #492027;
+}
+
+/* BOTH LOGIN FORMS */
+
+#login-form,
+#manager-login-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* LABELS */
+
+#login-form label,
+#manager-login-form label {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+/* INPUTS */
+
+#login-form input,
+#manager-login-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 23px;
+    background: #0d0a0a;
+    border: 1px solid #382024;
+    border-radius: 3px;
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    outline: none;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+#login-form input:focus,
+#manager-login-form input:focus {
+    border-color: var(--red-bright);
+    box-shadow: 0 0 10px #b51f2c33;
+}
+
+#login-form input::placeholder,
+#manager-login-form input::placeholder {
+    color: #756b65;
+}
+
+/* BUTTONS */
+
+#login-form button,
+#manager-login-form button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    background: var(--red);
+    border: 1px solid var(--red-bright);
+    border-radius: 3px;
+    color: var(--cream);
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background .25s ease,
+                box-shadow .25s ease,
+                transform .25s ease;
+}
+
+#login-form button:hover,
+#manager-login-form button:hover {
+    background: var(--red-bright);
+    box-shadow: 0 0 18px #b51f2c44;
+}
+
+#login-form button:active,
+#manager-login-form button:active {
+    transform: scale(.98);
 }
 
 /* FORM BOX */
@@ -174,54 +299,6 @@ body {
     margin-bottom: 8px;
 }
 
-#login-form input {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 23px;
-    background: #0d0a0a;
-    border: 1px solid #382024;
-    border-radius: 3px;
-    color: var(--cream);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 17px;
-    outline: none;
-    transition: border-color .25s ease, box-shadow .25s ease;
-}
-
-#login-form input:focus {
-    border-color: var(--red-bright);
-    box-shadow: 0 0 10px #b51f2c33;
-}
-
-#login-form input::placeholder {
-    color: #756b65;
-}
-
-#login-form button {
-    width: 100%;
-    padding: 15px;
-    margin-top: 5px;
-    background: var(--red);
-    border: 1px solid var(--red-bright);
-    border-radius: 3px;
-    color: var(--cream);
-    font-family: 'Cinzel', serif;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: background .25s ease, box-shadow .25s ease, transform .25s ease;
-}
-
-#login-form button:hover {
-    background: var(--red-bright);
-    box-shadow: 0 0 18px #b51f2c44;
-}
-
-#login-form button:active {
-    transform: scale(.98);
-}
-
 .signup-prompt {
     margin-top: 25px;
     font-size: 16px;
@@ -248,42 +325,54 @@ body {
 /* FOOTER */
 
 .footer {
-    min-height: 130px;
+    padding: 32px 20px;
+    text-align: center;
     background: #050404;
     border-top: 2px solid var(--red);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    gap: 12px;
 }
 
 .footer-brand {
+    margin-bottom: 15px;
+    color: var(--gold);
     font-family: 'Cinzel', serif;
     font-size: 21px;
-    color: var(--gold);
 }
 
 .socials {
     display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
     justify-content: center;
-}
-
-.socials a {
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 16px;
     color: var(--muted);
-    text-decoration: none;
     font-size: 17px;
-    transition: color .25s ease;
+    
 }
-
-.socials a:hover {
-    color: var(--red-bright);
+.link{
+    text-decoration: none;
+    color:white;
+}
+.link:hover{
+    color:red;
+    
 }
 
 .footer p {
     color: #766b64;
     font-size: 14px;
 }
+
+.account{
+    display:none;
+    background-image: url(https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg);
+    background-repeat: no-repeat;
+    background-size: 3vw 5.7vh;
+    background-position: center;
+    border-radius: 30px;;
+    height:40px;
+    width:40px;
+
+}
+
+/* keep at bottom section */
+

@@ -20,14 +20,28 @@
             <span>Běi Dōng Nán Xī Měishí</span>
         </a>
         <nav class="top-links">
-            <a class="cart_link" href="index.html">Menu</a>
-            <a class="active" href="cart.html" onclick="cartBoi()">🛒</a>
-            <a class="active" href="login.html">Login</a>
+            <a class="login" href="index.html">Menu</a>
+            <a class="cart-link" href="cart.html" onclick="cartBoi()">🛒</a>
+            <a href="login.html" class="active">Login</a>
+            <a href="account.html" class="account"></a>
             
         </nav>
     </header>
-<!-- Add manager Login Section -->
     <main class="login-section">
+
+    <!-- LOGIN SELECTION BUTTONS -->
+    <div class="login-button-box">
+        <button class="customer-button" onclick="loginDisplay('customer')">
+            Customer Login
+        </button>
+
+        <button class="manager-button" onclick="loginDisplay('manager')">
+            Manager Login
+        </button>
+    </div>
+
+    <!-- CUSTOMER LOGIN -->
+    <section id="customer-login" class="login-content">
 
         <div class="login-decoration">
             <span>EST. WORLDWIDE</span>
@@ -37,32 +51,20 @@
         <div class="form-box">
 
             <p class="eyebrow">WELCOME BACK</p>
-
-            <h1>Log In</h1>
-
-            <p class="subtitle">
-                Your table is waiting.
-            </p>
+            <h1>Customer Login</h1>
+            <p class="subtitle">Your table is waiting.</p>
 
             <div class="form-divider"></div>
 
             <form id="login-form">
 
                 <label for="login-username">Username</label>
-                <input
-                    type="text"
-                    id="login-username"
-                    placeholder="Enter your username"
-                    required
-                >
+                <input type="text" id="login-username"
+                    placeholder="Enter your username" required>
 
                 <label for="login-password">Password</label>
-                <input
-                    type="password"
-                    id="login-password"
-                    placeholder="Enter your password"
-                    required
-                >
+                <input type="password" id="login-password"
+                    placeholder="Enter your password" required>
 
                 <button type="submit">Log In</button>
 
@@ -74,30 +76,60 @@
             </p>
 
         </div>
+    </section>
 
-        <div class="login-decoration bottom-decoration">
+
+    <!-- MANAGER LOGIN -->
+    <section id="manager-login" class="login-content">
+
+        <div class="manager-login-decoration">
+            <span>MANAGEMENT ACCESS</span>
             <div class="decoration-line"></div>
-            <span>AN EXPERIENCE OF FLAVOR</span>
         </div>
 
-    </main>
+        <div class="form-box">
+
+            <p class="eyebrow">WELCOME BACK</p>
+            <h1>Manager Login</h1>
+            <p class="subtitle">Your restaurant awaits.</p>
+
+            <div class="form-divider"></div>
+
+            <form id="manager-login-form">
+
+                <label for="manager-login-username">Username</label>
+                <input type="text" id="manager-login-username"
+                    placeholder="Enter your username" required>
+
+                <label for="manager-login-badge">Badge Number</label>
+                <input type="text" id="manager-login-badge"
+                    placeholder="Enter your badge number" required>
+
+                <label for="manager-login-password">Password</label>
+                <input type="password" id="manager-login-password"
+                    placeholder="Enter your password" required>
+
+                <button type="submit">Log In</button>
+
+            </form>
+
+        </div>
+    </section>
+
+</main>
+
 
     <footer class="footer">
-
-        <div class="footer-brand">
-            Běi Dōng Nán Xī Měishí
-        </div>
-
+        <div class="footer-brand">Běi Dōng Nán Xī Měishí</div>
         <div class="socials">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">YouTube</a>
-            <a href="#">Google</a>
+            <a href="https://www.instagram.com/nba_youngboy/" class="link">Instagram</a>
+            <a href="https://www.facebook.com/river.christlight/" class="link">Facebook</a>
+            <a href="https://youtu.be/XIwy_5Vdw_o?si=v7Iv7uFFBnfd_QHn" class="link">YouTube</a>
+            <a href="https://www.google.com/search?q=home+depot&sca_esv=84ace98110dff800&sxsrf=AKL5yDiY9CPKygD_OgtNFMl5xkk6r0GB2A%3A1795528827556&source=hp&ei=e5gFa7PvHpOD0PEP5s2zoQo&iflsig=AHSINFcAAAAAawWmiyvFDEtodhm9TD8zOUEtX3ZDnSS0&ved=2ahUKEwjzmMqP4qCYAxWTATQIHebmLKQQ4dUDegQIABAp&uact=5&oq=home+depot&gs_lp=Egdnd3Mtd2l6Igpob21lIGRlcG90Mg4QLhiABBixAxjHARjRAzILEAAYgAQYsQMYyQMyERAuGIAEGJIDGMcBGK8BGI4FMgsQLhiABBjHARivATILEC4YgAQYxwEYrwEyCxAuGIAEGMcBGK8BMgsQLhiABBjHARivATIFEAAYgAQyCxAuGIAEGMcBGK8BMgUQABiABEjXDVAAWIUNcAB4AJABAJgBN6AB4wOqAQIxMLgBA8gBAPgBAZgCCqACkATCAhEQLhiABBixAxjHARivARiOBcICERAAGIAEGIoFGLEDGIMBGLQHwgIOEC4YgAQYigUYsQMYgwHCAhEQLhiABBiKBRiNBhixAxiDAcICCBAAGIAEGLQHwgIIEAAYgAQYsQPCAg4QLhiABBiKBRiNBhixA8ICFBAAGIAEGIoFGI0GGLEDGIMBGLQHwgIREC4YgAQYsQMYgwEYxwEY0QPCAggQLhiABBi0B8ICCxAAGIAEGLEDGIMBwgILEAAYgAQYigUYkgPCAgsQLhiABBixAxiDAcICDhAuGIAEGMcBGK8BGI4FwgIIEAAYgAQYyQOYAwCSBwIxMKAH754BsgcCMTC4B5AEwgcFMC43LjPIBx6ACAE&sclient=gws-wiz" class="link">Google</a>
         </div>
-
         <p>© Běi Dōng Nán Xī Měishí</p>
-
     </footer>
+
 
     <script src="script.js"></script>
 

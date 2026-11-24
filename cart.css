@@ -16,10 +16,6 @@
     --muted: #aa9c91;
 }
 
-/* FONTS */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap');
-
 /* GENERAL */
 
 body {
@@ -27,92 +23,112 @@ body {
     color: var(--cream);
     font-family: 'Cormorant Garamond', serif;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* HEADER LINKS */
 
-.name {
-    font-size: 27px;
-    font-weight: 700;
-    font-family: 'Cinzel', serif;
+/* NAVIGATION */
+
+.topbar {
+    min-height: 92px;
+    padding: 14px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: #050404;
+    border-bottom: 2px solid var(--red);
+    box-shadow: 0 5px 24px #000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
     color: var(--gold);
     text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(17px, 2vw, 27px);
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
-.linkContainer {
+.brand img {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+}
+
+.top-links {
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: clamp(14px, 2.5vw, 38px);
-    background: #050404;
-    justify-content: center;
-    padding: 20px;
-    border-bottom: 2px solid var(--red);
 }
 
-#linkTwo {
-    color: var(--red-bright);
-    font-family: 'Cinzel', serif;
-}
-
-.link {
-    font-size: 15px;
-    font-weight: 500;
-    font-family: 'Cinzel', serif;
+.top-links a {
     color: var(--cream);
     text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
     transition: color .25s ease;
 }
 
-.link:hover {
+.top-links a:hover,
+.top-links a.active {
     color: var(--red-bright);
 }
 
-/* FOOTER */
-
-.footer {
-    min-height: 100px;
-    display: flex;
-    float:bottom;
-    background: #050404;
-    color: var(--cream);
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-top: 2px solid var(--red);
+.top-links .cart-link {
+    font-size: 25px;
 }
 
-/* CART BACKGROUND */
 
-.cartCartContainer {
-    display: flex;
-    flex-direction: column;
-    min-height: 70vh;
-    padding: 30px 6%;
+
+/* MAIN PAGE */
+
+.cartPage {
+    flex: 1;
     background:
-        radial-gradient(ellipse at center top, #351014 0%, #16090b 42%, var(--black) 85%);
-    overflow: hidden;
+        radial-gradient(
+            ellipse at center top,
+            #351014 0%,
+            #16090b 42%,
+            var(--black) 85%
+        );
+    padding: 20px 6% 60px;
 }
-.cartContainer{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    right:30%
-}
-/* CART HEADER */
 
 .cartHeader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 110px;
+    text-align: center;
     font-family: 'Cinzel', serif;
     font-size: clamp(38px, 6vw, 65px);
     font-weight: 500;
     color: var(--cream);
-    background: transparent;
-    text-align: center;
+    padding: 30px 0 45px;
+}
+
+/* CART LAYOUT */
+
+.cartCartContainer {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.8fr);
+    gap: 50px;
+    max-width: 1250px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.cartSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 /* CART ITEMS */
@@ -121,12 +137,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 50px;
-    width: 400px;
-    max-width: 100%;
+    width: 100%;
     background: var(--panel);
     color: var(--cream);
-    margin: 20px auto;
-    padding: 12px 17px;
+    margin: 10px 0;
+    padding: 18px 22px;
     border: 1px solid #492027;
     border-left: 4px solid var(--red);
     border-radius: 5px;
@@ -142,57 +157,13 @@ body {
     border-color: var(--red-bright);
 }
 
-/* CHECKOUT BUTTON */
-
-.checkoutBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-    padding: 18px 25px;
-    background: var(--red);
-    color: var(--cream);
-    border: 1px solid var(--red-bright);
-    border-radius: 3px;
-    font-family: 'Cinzel', serif;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: background .25s ease, box-shadow .25s ease, transform .25s ease;
-    box-shadow: 0 4px 15px #0005;
-}
-
-.checkoutBtn:hover {
-    background: var(--red-bright);
-    box-shadow: 0 0 20px #b51f2c44;
-    transform: translateY(-3px);
-}
-
-.checkoutBtn:active {
-    transform: translateY(0);
-}
-
-.checkoutBtn .arrow {
-    font-size: 22px;
-    transition: transform .3s ease;
-}
-
-.checkoutBtn:hover .arrow {
-    transform: translateX(6px);
-}
-
-/* TOTAL BUTTON CONTAINER */
+/* ORDER SUMMARY */
 
 .buttonTotal {
-    position: absolute;
-    bottom:480px;
-    left:1150px;
-    width: 500px;
+    position: sticky;
+    top: 30px;
+    width: 100%;
 }
-
-/* SUBTOTAL */
 
 .subtotalContainer {
     background: linear-gradient(145deg, var(--panel-light), #0d0a0a);
@@ -244,3 +215,216 @@ body {
     color: var(--muted);
     margin-top: 15px;
 }
+
+/* CHECKOUT BUTTON */
+
+.checkoutBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 18px 25px;
+    background: var(--red);
+    color: var(--cream);
+    border: 1px solid var(--red-bright);
+    border-radius: 3px;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background .25s ease,
+                box-shadow .25s ease,
+                transform .25s ease;
+    box-shadow: 0 4px 15px #0005;
+}
+
+.checkoutBtn:hover {
+    background: var(--red-bright);
+    box-shadow: 0 0 20px #b51f2c44;
+    transform: translateY(-3px);
+}
+
+.checkoutBtn:active {
+    transform: translateY(0);
+}
+
+.checkoutBtn .arrow {
+    font-size: 22px;
+    transition: transform .3s ease;
+}
+
+.checkoutBtn:hover .arrow {
+    transform: translateX(6px);
+}
+
+/* CLEAR CART */
+
+.clearCart {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid #492027;
+    border-radius: 3px;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.clearCart:hover {
+    color: var(--cream);
+    border-color: var(--red-bright);
+    background: var(--panel);
+}
+
+.footer {
+    padding: 32px 20px;
+    text-align: center;
+    background: #050404;
+    border-top: 2px solid var(--red);
+}
+
+.footer-brand {
+    margin-bottom: 15px;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: 17px;
+    
+}
+.link{
+    text-decoration: none;
+    color:white;
+}
+.link:hover{
+    color:red;
+
+}
+
+.footer p {
+    color: #766b64;
+    font-size: 14px;
+}
+
+.account{
+    display:none;
+    background-image: url(https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg);
+    background-repeat: no-repeat;
+    background-size: 3vw 5.7vh;
+    background-position: center;
+    border-radius: 30px;;
+    height:40px;
+    width:40px;
+
+}
+
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    min-height: 140px;
+    margin: 10px 0;
+    padding: 16px;
+    background: var(--panel);
+    border: 1px solid #492027;
+    border-left: 4px solid var(--red);
+    border-radius: 5px;
+}
+
+.cart-image {
+    width: 115px;
+    height: 105px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #0d0a0a;
+    border-radius: 4px;
+    color: var(--muted);
+}
+
+.cart-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cart-item-info h3 {
+    margin-bottom: 8px;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+}
+
+.cart-item-info p {
+    color: var(--muted);
+    font-size: 17px;
+}
+
+.cart-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cart-quantity-button {
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    background: var(--red);
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.cart-quantity {
+    min-width: 20px;
+    text-align: center;
+    color: var(--cream);
+    font-family: 'Cinzel', serif;
+}
+
+.cart-remove-button {
+    padding: 9px 13px;
+    border: 1px solid #492027;
+    border-radius: 3px;
+    background: transparent;
+    color: var(--muted);
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+}
+
+.account{
+    display:none;
+    background-image: url(https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg);
+    background-repeat: no-repeat;
+    background-size: 3vw 5.7vh;
+    background-position: center;
+    border-radius: 30px;;
+    height:40px;
+    width:40px;
+
+}
+
+
